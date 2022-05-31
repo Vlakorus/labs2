@@ -1,0 +1,26 @@
+import kotlin.math.*
+fun size(x1: Double, y1: Double, x2: Double, y2: Double): Double {
+    var d = sqrt((y1 - y2)*(y1 - y2) + (x1 - x2)*(x1 - x2))
+    return d
+}
+
+fun main(){
+    print("Введите координаты х1: ")
+    var xa = readLine()!!.toDouble()
+    print("Введите координаты y1: ")
+    var ya = readLine()!!.toDouble()
+
+    print("Введите координаты x2: ")
+    var xb = readLine()!!.toDouble()
+    print("Введите координаты y2: ")
+    var yb = readLine()!!.toDouble()
+
+    print("Введите координаты x3: ")
+    var xc = readLine()!!.toDouble()
+    print("Введите координаты y3: ")
+    var yc = readLine()!!.toDouble()
+
+    var p = size(xa, ya, xb, yb) + size(xb, yb, xc, yc) + size(xc, yc, xa, ya)
+    print("Периметр: ")
+    print(String.format("%.3f", p))
+}
